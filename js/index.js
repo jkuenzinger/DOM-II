@@ -47,14 +47,16 @@ const doubleMe = document.querySelector('.intro img');
     const page = document.querySelector('html')
     const subTitle = document.querySelector('h2')
     page.addEventListener('keydown', () => {
-        subTitle.textContent = 'The bus is not here, you are stranded.'
+        subTitle.textContent = 'The bus does not like you and ran away!'
     })
     page.addEventListener('keyup', () =>{
         subTitle.textContent = 'Welcome to the Fun Bus!'
     })
     
-    const btnProp = document.querySelector('.btn');
-    btnProp.addEventListener('click', () =>{
-    btnProp.style.backgroundColor = 'pink';
-    event.stopPropagation();
-})
+
+document.querySelectorAll('.btn').forEach(el => {
+    el.addEventListener('click', ()=> {
+        el.style.backgroundColor = 'pink';
+        event.stopPropagation();
+       })
+    })
